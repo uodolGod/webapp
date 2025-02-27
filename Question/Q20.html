@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #place{
+            width: 580px;
+            height: auto;
+            border: 1px solid #777;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="place"></div>
+</body>
+
+<script>
+
+
+var place = document.getElementById("place");
+
+window.onkeydown = function() {
+
+    if (event.keyCode >= 48 && event.keyCode <= 57) {
+        place.innerHTML += "<img src='Images/" + (event.keyCode - 48) + ".png'>";
+    }
+
+    console.log(event.keyCode);
+
+};
+
+
+</script>
+    
+</html>

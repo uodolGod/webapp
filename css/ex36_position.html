@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: cornflowerblue;
+            /* width: 100%; 설정안하면 auto */
+            height: 150px;
+            position: absolute;
+
+            /*
+
+                - left
+                - top
+                - right
+                - bottom
+
+            */
+
+            /* left:0px;
+            top:0px; */
+            
+            /* LTR 환경 충돌시 left우선 */
+
+            left:100px;
+            right:100px;
+            top:0px; 
+
+
+        }
+        #box2{
+            background-color: tomato;
+            width: 150px;
+            height: auto;
+            position: absolute;
+
+            left:600px;
+            top:10px;
+            bottom:400px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ex36 -->
+
+    <div id="box">상자</div>
+
+    <div id="box2">상자2</div>
+
+</body>
+</html>

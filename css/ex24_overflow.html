@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            오버 플로우
+
+            각각의 이미지 파일을 만들지 않고, 커다란 덩어리로 만드는 이유 ?
+            - 디자인 팀 <- 협업 -> 개발팀
+            - 이미지 + 개발 파트의 크기 위치
+            
+
+        */
+
+        #box1{
+            background-color: gold;
+            width: 200px;
+            height: 200px;
+            /* overflow-y: scroll; */
+            overflow: auto;
+        }
+
+        #span1{
+            background-color: cornflowerblue;
+            /*
+            인라인태그는 크기 조절 불가능> 오버 플로우 발생(X)
+            
+            width: 200px;
+            height: 200px; 
+            */
+        }
+        #box2{
+            border: 10px solid green;
+            width: 260px;
+            height: 260px;
+            overflow: auto;
+        }
+        #mail{
+            background-image: url("Images/catty10.png");
+            background-position: -50px -35px;
+
+            border: 1px solid black;
+            /* div > width: 100%, height: 0*/
+            width: 75px;
+            height: 75px;
+        }
+        #mail:hover{
+            background-position: -250px - 250px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- ex24_overflow.html -->
+    <h1>Overflow</h1>
+
+    <div id="box1">상자 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis dolorum at cumque alias omnis, maiores dolores excepturi non corrupti ab, soluta ipsa error, velit sunt eligendi unde commodi hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequuntur provident similique eos dolores odio officiis consequatur deserunt asperiores? Adipisci omnis porro debitis ipsum sapiente enim nesciunt sit est nemo.
+
+    </div>
+    <span id="span1">영역전개 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ipsum commodi facilis ratione numquam velit voluptatum. Aliquid porro ullam facilis possimus officia autem hic totam, error sequi a, ducimus fugit nulla deserunt suscipit officiis ea minima assumenda vitae ab animi id expedita iste enim maiores. Aut maiores dicta ipsa consequatur earum. Sed fuga sunt facilis asperiores delectus corrupti, ad numquam nam facere mollitia velit doloremque vitae blanditiis voluptatem pariatur quia vel illum consectetur aliquam hic dicta! Minus consectetur nulla labore velit iure, eos excepturi molestias nesciunt doloremque, quaerat aliquid exercitationem quibusdam cumque repellat veritatis, hic dignissimos. Blanditiis tempore dolorem quidem?</span>
+
+    <div id="box2">
+        img[src=Images/catty$$.png]*10
+        <img src="Images/catty01.png" alt="">
+        <img src="Images/catty02.png" alt="">
+        <img src="Images/catty03.png" alt="">
+        <img src="Images/catty04.png" alt="">
+        <img src="Images/catty05.png" alt="">
+        <img src="Images/catty06.png" alt="">
+        <img src="Images/catty07.png" alt="">
+        <img src="Images/catty08.png" alt="">
+        <img src="Images/catty09.png" alt="">
+        <img src="Images/catty10.png" alt="">
+    </div>
+
+    <h1>네이버 아이콘</h1>
+
+    <!-- <img src="Images/sp_main.eae24523.png"> -->
+    <img src="Images/catty10.png">
+
+    <div id="mail" ></div>
+
+    <hr>
+
+</body>
+</html>

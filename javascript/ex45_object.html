@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+
+        //객체 생성
+        const o1 = new Object();
+        const now = new Date();
+        const arr = new Array();
+
+        /*
+            class User{
+                private String name;
+                private int age;
+
+                public User(String name, int age){
+                    this.name = name;
+                    this.age = age;
+                }
+            }
+        */
+
+
+        //생성자 함수
+        //-함수명이 대문자로 시작(파스칼 표기법)
+        function User(name, age){
+            this.name = name;
+            this.age = age;
+            // console.log(name);
+        }
+
+        //- 생성자 함수는 일반 함수 호출하듯이 호출 X
+        // window.User('홍길동',20);
+
+        // 올바른 호출?
+        //1. new 호출 > new Object() 호출
+        //2. User()  생성자(초기화)와 클래스 역할을 동시에 함
+        // 
+
+        const hong =new User('홍길동',20);
+        const lee =new User('이길동',20);
+
+        console.log(hong);
+        console.log(lee);
+        
+        //자료형
+        //1.number
+        //2. string
+        //3. boolean
+        //4. object
+        const today = new Date();
+        const list = new Array();
+        const user = new User('홍길동',20);
+        const obj = {};
+        const obj2 = new Object();
+        
+        //constructor
+        console.log(today.constructor.name);
+        console.log(list.constructor.name);
+        console.log(user.constructor.name);
+        console.log(obj.constructor.name);
+        console.log(obj2.constructor.name);
+
+
+
+    </script>
+</body>
+</html>

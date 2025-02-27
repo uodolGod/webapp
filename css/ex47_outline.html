@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{ width: 200px; height: 200px; box-sizing: content-box;}
+        #box1{background-color: tomato;}
+        #box2{background-color: gold;}
+        #box3{background-color: cornflowerblue;}
+
+        #list1{
+            border: 3px solid black; padding: 50px;
+        }
+        #list1:hover #box2{
+            /* border: 10px solid black; */
+            outline: 10px solid black;
+        }
+
+        .txt{
+            display: block;
+            margin-bottom: 3px;
+            outline: none;
+            opacity: .3;
+        }
+        .txt:focus{
+            /* border-color: red;
+            opacity: 1; */
+            /* border-width: 5px; */
+            outline: 2px solid #575757;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex47_outline.html -->
+    <div id="list1'">
+        <!-- div#box$.box*3 -->
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+
+    </div>
+
+    <hr>
+
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+
+</body>
+</html>

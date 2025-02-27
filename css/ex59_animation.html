@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            1. transition > 단순 버전
+            2. animation > 복잡한 버전
+        */
+        #box{
+            background-color: gold;
+            width: 150px; height: 150px;
+            transition: all 1s;
+        }
+
+        body:hover #box{
+            /* width: 300px; */
+
+            /* 미리 선언한 애니메이션을  실행 */
+            /* animation-name: key3; */
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+        /* 속성값의(시간대별) 변화 과정에 대한 정의 */
+        @keyframes key1{
+            from{
+                width: 150px;
+            }
+            to{
+                width: 300px;
+            }
+        }
+        @keyframes key2{
+            0%{
+                width: 150px;
+            }
+            25%{
+                width: 500px;
+            }
+            50%{
+                width: 50px;
+            }
+            70%{
+                width: 500px;
+            }  
+            100%{
+                width: 150px;
+            }
+            
+        }
+        @keyframes key3{
+            0%{ transform: translate(0px,0px);}
+            25%{ transform: translate(300px,0px);}
+            50%{ transform: translate(300px,300px);}
+            75%{ transform: translate(0px,300px);}
+            100%{ transform: translate(0px,0px);}
+        }
+
+        @keyframes key-effect {
+            0% {transform: translate(0px,0px);}
+            25% {transform: translate(-1px,1px);}
+            50% {transform: translate(0px,0px);}
+            75% {transform: translate(1px,1px);}
+            100% {transform: translate(0px,0px);}
+        }
+
+        
+        .effect:hover{
+            animation-name: key-effect;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+        }
+        .effect2:hover > span{
+            display: inline-block;
+            animation-name: key-effect2;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes key-effect2{
+
+            from{text-shadow: 0px 0px 0px black;}
+            to{text-shadow: 2px 2px 2px black;}
+
+        }
+    </style>
+</head>
+<body>
+    <!-- ex59_animation.html -->
+    <div id="box">상자</div>
+
+    <h1>버튼</h1>
+
+    <button class="effect">글쓰기</button>
+    <button class="effect">가입하기</button>
+    <button class="effect">로그인</button>
+
+    <hr>
+
+    <button class="effect2">
+        <span>🦖</span>
+        글쓰기
+    </button>
+    <button class="effect2">
+        <span>🎶</span>
+        가입하기
+    </button>
+    <button class="effect2">
+        <span>🦊</span>
+        로그인
+    </button>
+
+
+</body>
+</html>

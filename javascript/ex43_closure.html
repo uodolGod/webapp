@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <script>
+        function outer(){
+            let a = 10;
+            console.log('a:', a);
+
+            function inner(){
+                //지역변수
+                let b = 20;
+                console.log('b:', b);
+            }
+            inner();  
+            //console.log('a:', a);
+            
+        }
+
+        outer();
+
+
+        
+
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        let num1 =100;
+
+        btn1.onclick = function(){
+            console.log('num1', num1);
+
+            let num2 =200;
+            console.log('num2', num2);
+
+            btn2.onclick = function(){
+
+                let num3 =300;//지역 변수(btn2.onclick)
+                console.log('num3', num3);
+
+                console.log('num2', num2);  // 클로저 발생 내부함수가 선언될때 의 환경을 기억하는 함수
+                
+            }
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

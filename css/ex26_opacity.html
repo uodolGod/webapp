@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+            rgba() 함수 > 색상의 투명도
+
+            Opacity, 불투명도
+            - 객체에 대한 투명도
+            - 0(투명) ~ 1(불투명)
+        */
+
+        /* img#cat3{
+            opacity: 30%;
+        }  */
+        #box > img{
+            opacity: 30%;
+            cursor: pointer;
+        }
+        #box > img:hover{
+            opacity: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- ex26_opacity -->
+    <div id="box">
+        <img src="Images/catty01.png" id="cat1">
+        <img src="Images/catty02.png" id="cat2">
+        <img src="Images/catty03.png" id="cat3">
+        <img src="Images/catty04.png" id="cat4">
+        <img src="Images/catty05.png" id="cat5">
+    </div>
+</body>
+</html>                 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {color: blue; }
+        .two {text-decoration: underline;}
+        .three {background-color: yellow;}
+
+        .one.two { font-weight:bold; }
+
+        /*클래스 조합*/
+        
+        p#p1.two{ color : rebeccapurple;}
+
+
+    </style>
+</head>
+<body>
+<!-- ex09_class.html -->
+<!-- -->
+    <p class="one">문단</p>
+    <p class="two">문단</p>
+    <p class="three">문단</p>
+    <p class="one three two">새로운 짬뽕 문단</p>
+    <p class="one two">추가된 문단입니다.</p>
+
+    <p class="two" id="p1">문단입니다.</p>
+
+</body>
+</html>

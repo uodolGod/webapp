@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 100px;
+        }
+        #box1 {
+            border:1px solid black; width:200px; height: 200px;
+        }
+
+        .one{ font-size: 5rem;}
+        .two{ color: orange;}
+        .three{ text-decoration: underline;}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- ex51_css -->
+    <h1>CSS</h1>
+    <br>
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <hr>
+    <div id="box1">상자</div>
+
+    <h1>News</h1>
+
+    <div class="tool">
+        <button type="button" id="btn3">➕</button>
+        <button type="button" id="btn4">➖</button>
+    </div>
+
+    <p id="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui magnam, voluptas temporibus similique quisquam hic, quasi voluptates recusandae, eveniet optio est fugit veritatis. Accusantium ea corporis molestias facere cum quis, iste, itaque laborum numquam perferendis totam consequuntur blanditiis possimus, odit quam earum laudantium aliquid enim qui! Nam sed tenetur explicabo distinctio nemo deleniti asperiores consequatur ducimus ex hic, ab deserunt recusandae architecto dignissimos natus nostrum debitis eaque ipsa ea molestias repudiandae quo voluptatum sunt ullam! Adipisci atque nobis molestias in vero assumenda, corporis nam error. Reiciendis ea officiis aspernatur itaque fugiat debitis quas dicta libero officia rem totam ut dolore beatae dolor porro odio illo laborum quae eius, adipisci nemo? Deleniti molestias vero, rerum, eius nihil eaque, sint quo atque adipisci nam voluptates. Magnam, eum aliquam. Illum eaque cumque, enim modi, eos quisquam iure aut debitis similique a velit vel optio suscipit vitae obcaecati. Neque minima reiciendis facere tempora explicabo ex eius eligendi, mollitia quos, eos fugiat ipsam aspernatur? Eligendi hic dignissimos numquam dolorum quas eos unde harum provident, quidem nihil, similique maiores, cumque incidunt totam commodi magnam ipsa. Numquam deserunt atque non animi autem blanditiis molestias temporibus explicabo ex similique facere magnam, minus, voluptas excepturi, quam voluptatibus et possimus.</p>
+
+
+    <script>
+        const box1 = document.getElementById('box1');
+
+        document.getElementById('btn1').onclick = function() {
+
+            /*
+                JS > CSS 조작하기
+
+                1. 모든 태그 > style > CSS 속성으로 조작
+                - 자바 스크립트 : style 프로퍼티 조작
+                - CSS 속성명 > 동명의 프로퍼티로 제공
+                - 케멀 표기법
+
+            */
+
+            // box1.style = 'color: blue;';
+            // box1.style = 'color: red; font-size: 3rem;';
+
+            // box1.style.color = 'blue';
+            // box1.style.fontSize = '3rem';
+            // box1.style['font-size'] = '3rem';
+            
+            //<div class="one">상자</div>
+            // box1.className = 'one two'; //DOM
+            // box1.classList.add('one'); //DOM
+            // box1.classList.add('two'); //DOM
+
+            //현재 상자의 너비?'
+            //- 자바스크립트로 CSS를 조작 == 태그의 style 프로퍼티 조작
+            // > 인라인 스타일로 정의된 css 속성만 접근 가능하다.
+            // box1.style.width ='400px';
+            // alert(box1.style.width+'+ 50px');
+
+            //버튼 클릭 > 상자 너비 + 50px
+            box1.style.width = parseInt(window.getComputedStyle(box1).getPropertyValue('width'))+50+'px';
+
+            // const list = window.getComputedStyle(box1);
+
+            // console.log(list.width);
+            // console.log(list.getPropertyValue('width'));
+            // console.log(list.getPropertyValue('border'));
+            // console.log(document.body.getPropertyValue('margin'));
+
+
+
+
+        };
+
+
+        document.getElementById('btn2').onclick = function() {
+            // box1.style = 'background-color: yellow;';
+            // box1.style.backgroundColor = 'yellow';
+            
+            //<div class="one two three">상자</div>
+            // box1.className = 'one two three'; //DOM
+            // box1.classList.add('three'); //DOM
+            // box1.classList.remove('one'); //삭제(DOM)
+            box1.style.width = parseInt(window.getComputedStyle(box1).getPropertyValue('width'))-50+'px';
+        };
+        // console.log(window);
+
+
+        //절대 이렇게 쓰지 말것 !!!
+        //비권장
+        //btn2.onclick = function() {alert();}
+
+
+        let size = 16;
+
+        document.getElementById('btn3').onclick = function() {
+            size++;
+            document.getElementById('content').style.fontSize = size+'px';
+        };
+        document.getElementById('btn4').onclick = function() {
+            size--
+            document.getElementById('content').style.fontSize = size+'px';
+        };
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- ex -->
+<!-- -->
+
+    <script>
+        var a = 10; //전역변수 (자동으로  window 프로퍼티)
+        var a = 15;
+        window.b = 20;  //window객체 속성
+
+        function f1(){  //전역 함수
+            alert('f1');
+        }
+        console.log(window); // 10
+
+
+        function f2(){  //전역 함수
+            var c; // 지역변수
+            function f3(){  // 지역 함수
+
+            }
+            f3();
+        }
+        
+        // console.log(a);
+        // console.log(window.a);;
+
+        // f1();
+        // window.f1();
+
+        let d = 30;
+        const e =40;
+
+        const f3 = function(){
+
+        };
+
+        // console.log(window); //
+        //window.alert();
+        //window.prompt('input your name');
+        const hong = {
+            name: '홍길동',
+            age :20,
+            address:'서울시',
+            hello:function(){
+                console.log('hello'+ this.name + '입니다.');
+            }
+        };
+
+        // hong.hello();
+
+        //제어문 향상된 for문
+        // for(let p in hong){
+        //     console.log(p,hong[p]);
+        // }
+
+
+        //배열 > 유사배열 > object
+        const arr=[1,2,3,4,5];
+
+        console.log(arr.length);
+        
+        for(let p in arr){
+            console.log(p,arr[p]);  // index, value
+        }
+
+        // 배열 요소 추가(X), 객체의 속성을 추가한것 = ( window.a =100;)
+        arr[10] = 100;
+        console.log(arr[10]);
+        console.log(arr['10']);
+        console.log(arr.length);
+
+        
+    </script>
+</body>
+</html>

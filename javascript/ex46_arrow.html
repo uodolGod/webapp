@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <script>
+        /*
+            화살표 함수, Arrow Function
+            - 자바의 람다 > 인터페이스를 구현된 익명 객체의 추상메서드를 표현하는 기술
+            
+            - 자바 스크립트의 화살표 함수 > 익명 함수를 표현하는 기술
+
+
+
+            ITest test();
+        */
+
+        //1. 함수 선언
+        function f1(){
+            console.log("f1");
+        }
+        f1();
+
+        //2. 함수표현식(익명함수,리터럴)
+        const f2 = function() {
+            console.log("f2");
+        };
+        f2();
+
+        //3. 익명함수 > 즉시 호출 > 영역 관리용
+        (function(){
+            console.log('f3');
+        })();
+
+        (function(){
+            let name = 'hoon';
+        })();
+
+        console.log(name);
+
+
+        //4. 익명함수 > 화살표 함수 ( -> , =>)
+        const f4 = () => {
+            console.log('f4');
+        };
+        f4();
+
+
+        //구현부 1줄 > 실행 블럭 생략
+        const f5 = () => console.log('f5');
+        
+        const f6 = (num) => console.log(num);
+        const f7 = num => console.log(num);
+        const f8 = (a,b) => console.log(a,b);
+
+        //반환값
+        const f9 = () => {return 100;};
+        const f10 = () => 200;
+
+        // document.getElementById('btn1').onclick = function() {
+        //     console.log(event.target.id);
+        // };
+
+        // document.getElementById('btn2').onclick 
+        // = () => console.log(event.target.id);
+
+        // setTimeout(function() { alert();}, 1000);
+
+        // setTimeout(() => alert(), 1000);s
+
+
+        document.getElementById('btn1').onclick = function() {
+            //이벤트 발생 객체?
+            // alert(event.target.value);
+            // alert(event.srcElement.value);
+            alert(this.value);  //***** 많이 사용
+        };
+
+        document.getElementById('btn2').onclick = () => {
+            //이벤트 발생 객체?
+            alert(event.target.value);
+            // alert(event.srcElement.value);
+            // alert(this.value);  //익명으로 안나옴 
+            // alert(this);
+
+
+            //*** 화살표 함수는 어떤 상황이든  this가 window 객체를 가르킨다.
+        };
+        
+
+
+
+    </script>
+</body>
+</html>

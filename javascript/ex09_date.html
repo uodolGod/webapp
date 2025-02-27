@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- ex09_date.html -->
+<!-- -->
+    <script>
+        //자바스크립트 클래스가 없다.
+        // > 클래스 없다. > 객체를 못만든다?
+
+        // 개발자가 클래스를 정의할 수 없다.
+        // > 내장 클래스 > 내장 객체
+
+        
+        //날짜 시간
+        //- 내장 객체 > Date
+
+        //현재시각
+        var now = new Date();   //new 생성자함수();
+        console.log(now);
+        console.log(now.toString());
+        console.log(typeof now);    //object
+
+        //요소 추출
+        //- c.get(Calendar. 상수)
+        console.log(now.getYear());         //125
+        console.log(now.getFullYear());     //2025
+        console.log(now.getMonth());        //1
+        console.log(now.getDate());         //20
+        console.log(now.getDay());          //4
+        console.log(now.getHours());        //15
+        console.log(now.getMinutes());      //18
+        console.log(now.getSeconds());      //12
+        console.log(now.getMilliseconds()); //194
+        console.log(now.getTime());         //1740032292194ms
+        
+        //출력 > %tF, %tT, %tA
+
+        console.log(now.toLocaleString());  //2025. 2. 20. 오후 3:26:51
+        console.log(now.toLocaleDateString());  //2025. 2. 20.
+        console.log(now.toLocaleTimeString());  //오후 3:28:29
+
+        //특정 시각 만들기
+        var birthday = new Date(1999,1,20,12,30,0);
+        console.log(birthday);
+        
+        now.setTimee(now.getTime()+100*24*60*60*1000);
+
+
+    </script>
+</body>
+</html>

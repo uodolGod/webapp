@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- ex10_emmet.html -->
+<!-- 
+    Emmet, Zen-coding
+    - 대부분 편집기들이 제공하는 확장 기능
+    - CSS 선택자를 사용해서 > HTML(CSS) 코드를 빠르게 작성하는 기능
+    - http://emmet.io
+
+    
+
+-->
+    <h1>태그 선택자</h1>
+
+
+    <img src="dog.jpg" alt="강아지">
+
+    <h1>아이디 선택자</h1>
+
+
+    div#box1{}
+    <div id="box2">박스2</div>
+
+    input#txtName
+    <input type="text" id="txtname">
+    
+    h1#title
+    <h1 id="title">제목</h1>
+
+    <div id="one"></div>
+
+
+    <h1>클래스 선택자</h1>
+
+    div.item{}
+    <div class="item">다아이브이</div>
+
+    img.pet
+    <img src="" alt="" class="jpg">   <!--ctrl+Enter-->
+
+    div.one.two
+    <div class="one two"></div>
+
+    intput#name.txt
+    <intput id="name" class="txt">입력</intput>
+
+    div#box1.one.two.three
+    <div id="box1" class="one two three">다잉</div>
+
+    <h1>속성 선택자</h1>
+    
+
+    div[title]{}
+    <div></div>
+    <div title=""></div>
+
+    div[title]
+    <div title="상자"></div>
+    
+    div[title=상자]
+    <div title="상자">Box</div>
+
+
+    img[width]
+    <img src="" alt="" width="">
+    
+    img[width height]
+    <img src="a" alt="Adjacent" width="aaa" height="aaaa">
+
+    img[width=100 height=200]
+    <img src="" alt="" width="100" height="200">
+
+
+
+
+    <h1>PCDATA</h1>
+
+    div{상자}
+    <div>상자</div>
+
+    
+    hi{자바수업}
+    <hi>자바수업</hi>
+
+    div#box1.box[title=상자입니다.]{첫번째 상자입니다.}
+    <div id="box1" class="box" title="상자입니다.">첫번째 상자입니다.</div>
+
+    
+    
+    
+    <h1>반복 기능</h1>
+
+    div*5
+    <div>이름</div>
+    <div>나이</div>
+    <div>주소</div>
+    <div>번호</div>
+    <div>학번</div>
+
+    div{상자N}*5
+    <div>상자N</div>
+    <div>상자N</div>
+    <div>상자N</div>
+    <div>상자N</div>
+    <div>상자N</div>
+
+    div.item*5
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    div[title]*5
+    <div title=""></div>
+    <div title=""></div>
+    <div title=""></div>
+    <div title=""></div>
+    <div title=""></div>
+
+    div[title=상자].item{상자입니다.}*5
+    <div title="상자" class="item">상자입니다.</div>
+    <div title="상자" class="item">상자입니다.</div>
+    <div title="상자" class="item">상자입니다.</div>
+    <div title="상자" class="item">상자입니다.</div>
+    <div title="상자" class="item">상자입니다.</div>
+
+    div#box$*5
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    
+    div{상자$}*5
+    <div>상자1</div>
+    <div>상자2</div>
+    <div>상자3</div>
+    <div>상자4</div>
+    <div>상자5</div>
+
+    h$*6
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+
+    div#box$.box[title=상자$]{상자$}*5
+    <div id="box1" class="box" title="상자1">상자1</div>
+    <div id="box2" class="box" title="상자2">상자2</div>
+    <div id="box3" class="box" title="상자3">상자3</div>
+    <div id="box4" class="box" title="상자4">상자4</div>
+    <div id="box5" class="box" title="상자5">상자5</div>
+
+    div{상자$}*15
+    div{상자$$}*100
+    div{상자$$,$$$}*100
+    
+
+    <h1>형제 선택자</h1>
+
+    a+b: 인접 형제
+    
+    h1+p
+    <h1></h1>
+    <p></p>
+
+    h1+p+div
+    <h1></h1>
+    <p></p>
+    <div></div>
+    
+    h1+p*5
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    
+    (h1+p*5)*2
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    h1#title{자바 수업입니다.}+p.desc{$.내용입니다.}*3
+    <h1 id="title">자바 수업입니다.</h1>
+    <p class="desc">1.내용입니다.</p>
+    <p class="desc">2.내용입니다.</p>
+    <p class="desc">3.내용입니다.</p>
+
+    <h1>자식 선택자</h1>
+    a>b: 자식
+    a b: 자손
+
+    div>span
+    <div><span></span></div>
+
+    div>span*3
+
+    ul>li*3
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+    ul#list1>li.item{항목$}*5
+    <ul id="list1">
+        <li class="item">항목1</li>
+        <li class="item">항목2</li>
+        <li class="item">항목3</li>
+        <li class="item">항목4</li>
+        <li class="item">항목5</li>
+    </ul>
+
+    table>tr>td
+    table>tr*2>td*3
+    table#tbl1>tr*2>td.cell${항목}*5
+    <table id="tbl1">
+        <tr>
+            <td class="cell1">항목</td>
+            <td class="cell2">항목</td>
+            <td class="cell3">항목</td>
+            <td class="cell4">항목</td>
+            <td class="cell5">항목</td>
+        </tr>
+        <tr>
+            <td class="cell1">항목</td>
+            <td class="cell2">항목</td>
+            <td class="cell3">항목</td>
+            <td class="cell4">항목</td>
+            <td class="cell5">항목</td>
+        </tr>
+    </table>
+
+
+    <h1>Lorem Ipsum</h1>
+
+    <h1>제목</h1>
+
+    div>lorem
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita ut rem eligendi modi aut praesentium porro illum culpa accusantium facere repellat quis vitae, aperiam cupiditate architecto saepe? Quae, facilis.</div>
+    
+    div{lorem}
+    div>lorem5
+    div>lorem50
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, assumenda? Expedita sint provident vitae? Aliquid alias qui quas maxime eveniet nemo minima sequi hic soluta recusandae praesentium reiciendis, repellat porro enim fugit! Saepe praesentium error id libero dolores molestiae exercitationem suscipit? In autem nihil reiciendis nisi est voluptates earum magni?</div>
+
+
+    h1>lorem5+p>lorem50
+    (h1>lorem5)+(p>lorem50)
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit temporibus modi vero dignissimos quasi dicta provident iure esse, facere ullam eveniet debitis? Excepturi aspernatur nostrum aliquid quas pariatur. Ut nihil natus blanditiis error perspiciatis voluptas tenetur quam quos debitis unde facere eum quidem saepe odit, enim ratione maxime optio numquam!</p>
+
+    
+
+
+</body>
+</html>

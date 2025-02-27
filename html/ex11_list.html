@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<!--ex11_list.html-->
+	<!--
+	
+		HTML로 할 수 있는 일 == 워드 프로세서로 할 수 있는 일
+		
+		List, 목록
+		1.<ol> + <li>
+			- <ol>: Ordered List,순서가 있는 목록
+			- <li>: List Item, 항목
+			
+		2.<ul> + <li>
+			- <ul>: Unordered List, 순서가 ㅇ
+			- <li>
+		3.<dl> + <dt> + <dd>
+			- 용어 정의 목록
+			- <dl>: Definition List, 정의 목록
+			- <dt>: Definition Term, 용어
+			- <dd>: Definition Description, 용어 설명
+			
+			
+	-->
+	<h1>오늘의 할일(숫자)</h1>
+	<!-- type="1","A","I","i"-->
+	<ol type="I">
+		<li>
+			9시50분까지 4층센터 도착
+			<ol type="i">
+				<li>집에서출발</li>
+				<li>합성동까지가서</li>
+				<li>고용복지센터도착</li>
+			</ol>
+		</li>
+		<li>실급4차신청하기</li>
+		<li>경부터미널8시까지도착</li>
+	</ol>
+	
+	<hr>
+	
+	<h1>오늘의 할일(불릿,bullet)</h1>
+	
+	<ul type="circle"> 
+		<li>9시50분까지 4층센터 도착</li>
+		<li>실급4차신청하기</li>
+		<li>경부터미널8시까지도착</li>
+	</ul>
+	
+	<p> 아래는 다음주부터 해도 됩니다.
+	
+	<ol start ="6">
+		<li>Servlet</li>
+		<li>JSP</li>
+		<li>SPRING</li>
+	</ol>
+	
+	<h1>내일의 할일</h1>
+	<!--reversed="reversed"-->
+	<ol reversed start="5">
+		<li>자바</li>
+		<li>오라클</li>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li type = "I">JAVASCRIPT</li>
+		
+	</ol>
+	
+	<hr>
+	
+	
+	<h1>자바 용어</h1>
+	<dl>
+		<dt>클래스</dt>
+		<dd>클래스용어 설명</dd>
+		
+		<dt>메소드</dt>
+		<dd>메소드용어 설명</dd>
+		
+		<dt>구조체</dt>
+		<dd>구조체용어 설명</dd>
+		
+	</dl>
+	
+	
+	<a href="ex12_link.html#a2">자바(수업 정리 인터페이스)</a>
+	
+	
+</body>
+</html>

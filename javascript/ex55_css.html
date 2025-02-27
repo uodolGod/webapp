@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 150px; height: 150px; background-color: gold;
+            position: relative;
+            left: 0px; top: 0px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- ex55_css.html -->
+    <h1>Drag & Drop (relative)</h1>
+    <br>
+    <p>상자를 이동하시오</p>
+    <div id="box1" class="box"></div>
+
+    <script>
+
+        const box1 = document.getElementById('box1');
+        let isDown = false;
+        let X = 0;
+        let Y = 0;
+
+        let bx =box1.getBoundingClientRect().x;
+        let by =box1.getBoundingClientRect().y;
+
+        // console.log(window.getComputedStyle(box1).getPropertyValue('left'));
+        console.log(box1.getBoundingClientRect().x);
+        console.log(box1.getBoundingClientRect().y);
+
+        window.onmousedown = function() {
+            if(event.target.id == 'box1') {               
+                isDown = true;
+
+                //상자의 어느 부분을 눌렀는지 = event.offsetX 
+                X = event.offsetX;
+                Y = event.offsetY;
+
+
+            }
+
+        };  
+
+        window.onmousemove = function() {
+            if (isDown) {
+                box1.style.left = event.clientX -X - bx + 'px';
+                box1.style.top = event.clientY -Y - by + 'px';
+            }
+        };
+
+        window.onmouseup = function() {
+            isDown = false;
+        };
+
+    </script>
+    
+</body>
+</html>

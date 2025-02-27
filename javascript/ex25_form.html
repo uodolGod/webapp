@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbll{
+            border: 1px solid gray;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        #tbll th,#tbll td{
+            border: 1px solid gray;
+            padding: 5px 10px;
+        }
+        #tbll th{
+            background-color: #EEE;
+        }
+        input{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<!-- ex25_form.html -->
+<!-- -->
+
+    <h1>회원가입</h1>
+
+    <form name="form1" action="ex25_ok.jsp">
+    <table name="tbll">
+        <tr>
+            <th>이름</th>
+            <th><input type="text" name="txtName"></th>
+        </tr>
+        <tr>
+            <th>나이</th>
+            <th><input type="number" name="txtAge"></th>
+        </tr>
+        <tr>
+            <th>아이디</th>
+            <th><input type="text" name="txtID"></th>
+        </tr>
+        <tr>
+            <th>암호</th>
+            <th><input type="password" name="txtPwd"></th>
+        </tr>
+        <tr>
+            <th>암호확인</th>
+            <th><input type="password" name="txtPwdc"></th>
+        </tr>
+    </table>
+    <div>
+        <input type="submit" value="가입하기" name="btnRegister">
+        <input type="button" value="가입하기" name="btnRegister2">
+    </div>
+
+    </form>
+
+    <script>
+        var form1 =document.form1;
+        var txtName = form1.txtName;
+        var txtAge = form1.txtAge;
+        var txtID = form1.txtID;
+        var txtPwd = form1.txtPwd;
+        var txtPwdc = form1.txtPwdc;
+        var btnRegister = form1.btnRegister;
+
+        btnRegister.onclick = m1;
+        btnRegister2.onclick = m2;
+
+        function m1(){
+            //유효성 검사 > 
+            if(txtName.value.length ==0){
+                alert('이름 필수!!');
+                return false;
+                // event.preventDefault();
+            }
+
+            //이름
+            //-필수값
+            // 2~5 자 이내 한글만
+            if(txtName.value.trim() ==''){
+                alert('이름 필수!!');
+                txtName.focus();
+                return false;
+                
+            }
+            if(txtName.value.length<2 || txtName.value.length>5){
+                alert('2~5 자 이내!!');
+                // txtName.focus();
+                txtName.select();
+                return false;
+                
+            }
+
+            for(var i=0; i,txtName.value.length; i++){
+                var c = txtName.value.charAt(i);
+                if(c > '가'|| c <'힣'){
+                    alert('한글만');
+                    txtName.select();
+                    return false;
+                }
+            }
+
+            //나이 -숫자만, 범위(10~60미만)
+            if(txtAge.value.trim()==''){
+                alert('나이입력!!');
+                txtAge.focus();
+                return false;
+            }
+
+            if(isNaN(txtAge.value)){
+                alert('숫자만');
+                txtAge.focus();
+                return false;
+            }
+
+            if(txtAge.value < 10 || txtAge.value >=60){
+                    alert('10세이상 60세 미만');
+                    txtAge.focus();
+                    return false;
+            }
+
+            //아이디 -필수값, 4~12자 이내, 영어+숫자, 숫자로는 시작 불가능
+
+            if(txtID.value.trim()==''){
+                alert('아이디 필수!!')
+                txtID.focus();
+                return false;
+            }
+            if(txtID.value < 4 || txtID.value > 12){
+                    alert('4~12자 이내');
+                    txtID.focus();
+                    return false;
+            }
+            for(var i=0; i,txtID.value.length; i++){
+                var c = txtID.value.charAt(i);
+                if(c < 'A'|| c <'Z')&&(c < 'a'|| c <'z')&&(c < '0'|| c <'9')&&(c !='_'){
+                    alert('영어+숫자+_');
+                    txtID.focus();
+                    return false;
+                }
+
+            }
+
+            if(txtPwd.value.trim()==''){
+                alert('암호 필수!!')
+                txtPwd.focus();
+                return false;
+            }
+        }
+        function m2(){
+            //유효성 검사 > 
+            if(txtName.value.length ==0){
+                alert('이름 필수!!');
+                return;
+                // event.preventDefault();
+            }
+            //애뮬레이터 함수
+            form1.submit();
+            
+        }
+
+        
+    </script>
+</body>
+</html>

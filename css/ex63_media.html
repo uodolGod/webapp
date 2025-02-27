@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+
+
+            media Query
+            - css 기술
+            - 장치의 해상도에 따라 적용할 CSS를 선택
+            - 모바일 웹 > 해상도 파편화
+            - 반응형 웹(Responsive Web)
+
+            미디어 유형
+            1. all
+            2. screen > 컴퓨터 & 모바일 > 기본값
+            3. print > 프린터
+            4. tv > 스마트 TV
+            5. projection > 프로젝터
+
+            미디어 조건
+            1. 모바일: 화면 <= 480px
+            2. 태블릿: 화면 <= 768px
+            3. 태블릿(가로): 화면 <= 1024px
+
+            4. 랩탑: 화면 <= 1600px
+            5. 데스크탑: 화면 > 1600px
+
+        */
+
+        body{
+            background-color: gold;
+        }
+        #list{
+            width: 780px;
+            
+        }
+        #list > div{
+            background-color:  tomato;
+            float: left;
+            margin: 10px;
+            width: 135px;
+        }
+        /*
+        @media screen and (max-width: 800px){
+            body{
+                background-color: white;
+            }
+            #list > div{
+            float: none;
+            
+            }
+        } */
+
+        /* 1024보다 작을 때 */
+        @media screen and (max-width: 1024px){
+            body{
+                background-color: cornflowerblue;
+            }
+        }
+
+        @media screen and (max-width: 640px){
+            body{
+                background-color: tomato;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex63_media.html -->
+    <div id="list">
+        <div>강알지</div>
+        <div>고양이</div>
+        <div>송아지</div>
+        <div>순대</div>
+        <div>호랭이</div>
+    </div>
+</body>
+</html>

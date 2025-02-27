@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!-- ex07_casting.html -->
+<!-- -->
+    <script>
+        /*
+            형변환 함수
+            1. number parseInt(value)
+
+            2. number parseFloat(value)
+
+
+        */
+
+        var n1=3.14;
+        console.log(parseInt(n1));  //3
+
+        var n2='200';
+        console.log(n2, typeof n2); //string
+        console.log(parseInt(n2), typeof parseInt(n2)); 
+
+        var n3='홍길동111';
+        console.log(parseInt(n3));  //NaN
+
+        var n4='100점';
+        console.log(parseInt(n4));  //100 ???
+
+        n4='100점이 아니라 90점입니다.';
+        console.log(parseInt(n4));  //100
+
+        //CSS 조작
+        var width ='200px';
+        console.log(parseInt(width)+100);   //300
+
+        var size = '1.5rem';
+        console.log(parseFloat(size)); //1.5
+
+        //Boolean isNaN(value)
+        // 숫자면 true 아니면 false
+
+        var age = 10;  //키보드 입력
+
+        if(isNaN(age)){
+            console.log('숫자입니다.')
+        } else {
+            console.log('숫자말고 다른 문자도 있습니다.')
+        }
+
+
+    </script>
+</body>
+</html>

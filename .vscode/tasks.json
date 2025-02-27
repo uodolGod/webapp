@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "c:\\class\\code\\java\\ClientTest\\src\\main\\webapp",
+			"problemMatcher": [],
+			"label": "Live Preview: 서버 실행",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            인접한 인라인 태그 사이의 공백을 제거하는 방법
+            1. 직접 공백을 지운다. > 사용 X
+            2. 부모태그의 font-size:0으로 한다. > 글꼴 크기 재정의
+            3. float> 추가 코드(clear)
+            4. flex
+        */
+        #menu{
+            font-size: 0;
+            width: 5000px;
+            margin: 0 auto;
+            transform: translate(0px, -100px);
+        }
+        /* #menu:hover{
+            transform: translate(0px, -10px);
+        } */
+        #menu > img:hover{
+            transform: translate(0px, 90px);
+        }
+        #sub-menu{
+            /* border: 1px solid black; */
+            font-size: 0;
+            width: 126px;
+            transform: translate(-110px, 0px);
+            
+        }
+        #sub-menu > img:hover{
+            transform: translate(110px, 0px);
+        }
+
+        #sub-menu2{
+            /* border: 1px solid black; */
+            font-size: 0;
+            width: 126px;
+            /* transform: translate(-110px, 0px); */
+            position: absolute;
+            right: -100px;
+            top:500px;
+        }
+        #sub-menu2 > img:hover{
+            transform: translate(-110px, 0px);
+        }
+        img{
+            transition: .7s all;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex54_transform.html -->
+    <nav id="menu">
+        <img src="Images/news06.jpg">
+        <img src="Images/news07.png">
+        <img src="Images/news05.jpg">
+        <img src="Images/news03.jpg">
+        <img src="Images/news06.jpg">
+    </nav>
+
+    <nav id="sub-menu">
+        <img src="Images/rect_icon01.png">
+        <img src="Images/rect_icon02.png">
+        <img src="Images/rect_icon03.png">
+        <img src="Images/rect_icon04.png">
+        <img src="Images/rect_icon05.png">
+    </nav>
+
+    <nav id="sub-menu2">
+        <img src="Images/rect_icon06.png">
+        <img src="Images/rect_icon07.png">
+        <img src="Images/rect_icon08.png">
+        <img src="Images/rect_icon09.png">
+        <img src="Images/rect_icon10.png">
+    </nav>
+</body>
+</html>

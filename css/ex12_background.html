@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* 폼컨트롤: 브라우저가 지정한 시본서식 > 사용자가 수정하는 순간 모든 서식이 기본값으로 돌아감*/
+        #txt-search{
+            /* background-color: brown; */
+
+            background-image: url(Images/hangame.png);
+            background-repeat: no-repeat; 
+            background-position: center center;
+
+
+        }
+
+        #txt-search:focus{
+            background-image: url();
+        }
+
+
+        #btn-search{
+            background-image: url(Images/bullet02.png);
+            background-repeat: no-repeat;
+            background-position: 5% center;
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- ex12_background -->
+<!-- -->
+
+    <h1>네이버</h1>
+
+    <form>
+
+        <input type="text" size="20">
+        <input type="text" id="txt-search" size="30">
+
+        <hr>
+
+        <input type="submit" id="btn-search" value="   검색하기">
+
+        <button type="submit">
+            <img src="Images/bullet04.png">
+            검색하기
+        </button>
+
+
+    </form>
+
+
+
+
+</body>
+</html>

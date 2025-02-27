@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            transfrom, animation, layout
+        */
+        body{padding: 100px;}
+        .box{ border: 1px solid black; width: 150px; height: 150px;}
+        #box1{ background-color: tomato;}
+        #box2{ background-color: gold;}
+        #box3{ background-color: dodgerblue;}
+
+        #b1, #b2, #b3{border: 10px solid black;}
+        
+        /*
+            변형, Transform
+            - 요소의 위치, 크기, 회전, 비틀기(왜곡)
+            - transform 값;
+
+            값(함수)
+            1. translate() 위치 변형
+            2. scale() 크기 변형
+            3. rotate() 회전 변형
+            4. skew() 비틀기 변형
+            
+            5. matrix()
+
+        */
+
+        #box1{
+            /* transform: translate(500px, 0px); */
+            /* transform: scale(1); */
+        }
+        #box2{
+            /* transform: translate(500px, 0px); */
+            /* transform: scale(-2, -.4); */
+            /* transform: rotate(-45deg); */
+            /* transform: skew(0deg, 60deg); */
+
+        }
+        /* #cat-list img:hover{
+            transform: translate(0px, -15px);
+        }
+        #cat-list:hover img{
+            transform: translate(0px, -15px);
+        }
+        #cat-list:hover + img{
+            transform: translate(0px, -15px);
+        } */
+        /* #cat-list:hover + img:nth-child(odd){
+            transform: translate(0px, -15px);
+        } */
+        /* #cat-list img:hover{
+            transform: scale(1.25,1.25);
+        } */
+        .box:hover{
+            transform: rotate(30deg);
+        }
+        #cat-list img:hover{
+            transform: rotate(30deg);
+        }
+
+        input[type=text]{
+            margin: 100px 0;
+            font-size: 2em;
+            padding:  10px;
+            /* transform: scale(-1,1); */
+            /* transform: rotate(10deg); */
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ex51_transfrom.html -->
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+
+
+    <hr>
+
+    <input type="text">
+
+
+    <h1>고양이</h1>
+    <div id="cat-list">
+        <img src="Images/catty01.png">
+        <img src="Images/catty02.png">
+        <img src="Images/news06.jpg">
+        <img src="Images/news03.jpg">
+        <img src="Images/news05.jpg">
+
+    </div>
+</body>
+</html>

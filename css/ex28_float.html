@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            float
+            -한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 텍스트및 인라인 요소가 
+
+            -기존의 출력 정책을 따르지 않고, 자신의 위치에서 벗어나(기존영역이 사라짐) 현재라인의 좌측 끝으로 이동한다.
+
+        */
+
+        p > b{
+            background-color: coral;
+            float:left;
+
+        }
+
+        p > img{
+            
+            float:left;
+        }
+
+        .title{
+            color: #444;
+            font-family: 'Verdanan';
+            letter-spacing: -1px;
+            font-variant: small-caps;
+            /* text-decoration: underline 2px dashed #444; */
+            border-bottom: 2px dashed #444;
+            padding-bottom: 5px;
+            width: 600px;
+            /* text-align: right; */
+            
+        }
+        .title .sub-title{
+            font-size:14px;
+            float:right;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex28_float.html -->
+
+    <h1 class="title">Member List <small class="sub-title"> Table Design </small></h1>
+
+
+
+    <h1>텍스트</h1>
+
+    <p>
+        텍스트 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis voluptates, est debitis libero nam ut eius vero at eveniet expedita repellat sequi velit ipsam quo ipsa voluptatum unde facilis dolorum inventore! Modi, facere ea eum doloremque molestias sit exercitationem debitis quas nostrum quaerat *****<b>홍길동</b>**** ratione ut minima culpa mollitia provident iure inventore in dignissimos magnam at officiis? Recusandae minima minus laudantium, similique nesciunt quidem magni voluptas iusto eveniet doloribus consequuntur veniam rem facilis doloremque debitis tempora? Facere mollitia pariatur esse suscipit? Quaerat exercitationem, libero consequatur eveniet non eum aperiam reiciendis omnis asperiores minima quasi rem maiores nisi, sint quam voluptatem.
+    </p>
+
+    <p>
+        텍스트 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis voluptates, est debitis libero nam ut eius vero at eveniet expedita repellat sequi velit ipsam quo ipsa voluptatum unde facilis dolorum inventore! Modi, facere ea eum doloremque molestias sit exercitationem debitis quas nostrum quaerat *****<img src="Images/man_06.png">**** ratione ut minima culpa mollitia provident iure inventore in dignissimos magnam at officiis? Recusandae minima minus laudantium, similique nesciunt quidem magni voluptas iusto eveniet doloribus consequuntur veniam rem facilis doloremque debitis tempora? Facere mollitia pariatur esse suscipit? Quaerat exercitationem, libero consequatur eveniet non eum aperiam reiciendis omnis asperiores minima quasi rem maiores nisi, sint quam voluptatem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem minima dolorum et dignissimos odio, a porro esse voluptas quam repellat. Quae distinctio dolorum eveniet vel dolores nam animi, recusandae placeat corrupti dolore facere consectetur sequi veritatis provident itaque fugit. Ut, quae? Esse, excepturi. Id eum sint qui veritatis facilis vitae debitis repudiandae commodi a inventore, nisi illum cum, laudantium nihil voluptatem blanditiis, quibusdam perspiciatis at. Alias ex possimus repudiandae expedita blanditiis voluptates id iure mollitia quisquam sapiente corporis ea, natus impedit nesciunt cumque eum non? Officiis eos, aliquam aperiam atque sapiente magni. Rem facilis natus maxime a. Quae, aliquam ratione!
+    </p>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px; height: 150px;
+
+        }
+        #box1{background-color: tomato;}
+        #box2{background-color: gold;}
+        #box3{background-color: cornflowerblue;}
+
+        .draggable{
+            position: relative;
+            left: 0px; top: 0px;
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex56_css.html -->
+    <h1 class="draggable">Drag & Drop (relative)</h1>
+    <br>
+    <p class="draggable">상자를 이동하시오</p>
+    <div id="box1" class="box draggable"></div>
+    <div id="box2" class="box draggable"></div>
+    <div id="box3" class="box draggable"></div>
+    <img src="Images/catty01.png" class="draggable">
+    <img src="Images/catty02.png" class="draggable">
+
+    <script>
+
+        let obj; //드래그할 상자 객체
+        let isDown = false;
+        let X = 0;
+        let Y = 0;
+
+        let bx;
+        let by;
+
+        window.onmousedown = function() {
+            if(event.target.classList.contains('draggable')) {               
+                isDown = true;
+
+                X = event.offsetX;
+                Y = event.offsetY;
+
+                bx = event.target.getBoundingClientRect().x -
+                parseInt(event.target.style.left != ''? event.target.style.left : 0);
+                by = event.target.getBoundingClientRect().y - 
+                parseInt(event.target.style.top != ''? event.target.style.top : 0);
+
+                obj = event.target;
+
+                // event.preventDefault();
+                // return false;
+            }
+
+        };  
+
+        window.onmousemove = function() {
+            if (isDown) {
+                obj.style.left = event.clientX -X - bx + 'px';
+                obj.style.top = event.clientY -Y - by + 'px';
+            }
+
+            //고스트 이미지 > 이미지를 드래그 
+              // 
+        };
+
+        window.onmouseup = function() {
+            isDown = false;
+        };
+
+    </script>
+    
+</body>
+</html>

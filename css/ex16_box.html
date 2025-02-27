@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            박스모델, Box Model
+            - HTML의 모든 태그는 화면에 출력될 때 사각형으로 출력된다.
+
+            1. 테두리, border
+            - 자신의 영역을 가진다. > 
+
+
+
+        */
+
+        #box3{
+            /* border-right-color: orange;     테두리 색색
+            border-right-width: 5px;        테두리 두께
+            border-right-style: solid;      테두리 타입 (solid, dashed, dotted) */
+
+            border-color: red orange;
+            border-color: orange;
+
+        }
+        #box2{
+            /* border-left-color: blue;  
+            border-right-color: blue;  
+            border-bottom-color: blue;  
+            border-left-color: blue;   */
+            border-color: red orange green blue ;
+            
+
+        }
+
+        #box1{
+            /* border-left-color: green;     
+            border-left-width: 15px;       
+            border-left-style: double; 
+            border-left: green solid 15px;
+            border-color: red;*/
+            border-color: red orange green;
+
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ex16_box.html -->
+    <h1>css박스모델</h1>
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+</body>
+</html>

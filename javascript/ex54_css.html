@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 150px; height: 150px; background-color: gold;
+            position: absolute;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <!-- ex54_css.html -->
+    <h1>Drag & Drop (absolute)</h1>
+    <div id="box1" class="box"></div>
+    <p>상자를 이동하시오</p>
+
+    <script>
+
+        const box1 = document.getElementById('box1');
+        let isDown = false;
+        let X = 0;
+        let Y = 0;
+
+        window.onmousedown = function() {
+            if(event.target.id == 'box1') {               
+                isDown = true;
+
+                //상자의 어느 부분을 눌렀는지 = event.offsetX 
+                X = event.offsetX;
+                Y = event.offsetY;
+
+
+            }
+
+        };  
+
+        window.onmousemove = function() {
+            if (isDown) {
+                box1.style.left = event.clientX -X + 'px';
+                box1.style.top = event.clientY -Y + 'px';
+            }
+        };
+
+        window.onmouseup = function() {
+            isDown = false;
+        };
+
+    </script>
+    
+</body>
+</html>

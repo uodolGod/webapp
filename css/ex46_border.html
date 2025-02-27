@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7121714adf.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin-bottom: 200px;
+        }
+        #box{
+            border: 1px solid black;
+            width: 300px; height: 200px;
+            margin: 50px;
+
+            /*
+                모서리 둥글게(%, px)
+                - 최대값 = 단축의 1/2 까지
+
+            */
+            /* 0 ~ 100 */
+            /* border-radius: 100px; */
+            /* 0 ~ 50 */
+            /* border-radius: 50%; */
+
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        #txt1{
+            border: 1px solid #767676;
+            outline: none;
+            background-color: beige;
+            border-radius: 2px;
+            padding: 2px;
+
+        }
+        img{
+            border-radius: 50%;
+        }
+        img:hover{
+            box-shadow: 0px 0px 7px black;
+        }
+
+        .input{
+
+        }
+        .input > input[type=text]{
+            float: left;
+            border: 1px solid #555;
+            width: 150px;
+            padding: 5px;
+            font-size: 1.2rem;
+            outline: none;
+            border-right: 0;
+            border-radius: 3px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        .input > button{
+            float: left;
+            border: 1px solid #555;
+            width: 50px;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        .input::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .btn-user{
+            border: 5px solid #777;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        .btn-user:hover{
+            text-shadow: 2px 2px 2px gray;
+        }
+        .btn-user>i{
+            font-size: 1.2rem;
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- ex46_border.html -->
+
+    <div id="box"></div>
+    <input type="text">
+    <input type="text" id="txt1">
+
+    <hr>
+
+    <img src="Images/dogbag.jpg">
+    <img src="Images/dogbag.jpg">
+    <img src="Images/dogbag.jpg">
+    <img src="Images/dogbag.jpg">
+    <img src="Images/dogbag.jpg">
+
+    <hr>
+
+    <div class="input">
+        <input type="text">
+        <button type="button">
+            <i class="Images/dogbag.jpg"></i></button>
+    </div>
+
+    <br>
+
+    <div class="input">
+        <input type="text">
+        <button type="button"><i class="fa-solid fa-cart-plus"></i></button>
+    </div>
+    
+    <br>
+
+    <button type="button" class="btn-user"><i class="fa-solid fa-trash"></i></button>
+    <button type="button" class="btn-user"><i class="fa-solid fa-cart-plus"></i></button>
+
+    <hr>
+
+    <input type="text" id="txt1" style="font-size: 2rem; padding: 5px 15px; border-radius: 10px;" >
+
+</body>
+</html>

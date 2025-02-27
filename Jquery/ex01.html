@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="txt1" id="txt1">
+
+    <script src = JS/jquery-3.7.1.js></script>
+    <!-- ex -->
+    <!-- -->
+
+    
+
+    <script>
+
+
+
+        //1. BOM > DOM 트리
+        window.document.all.txt1.value = 'BOM > DOM';
+
+        //2. DOM > DOM 트리 > 
+        document.getElementById('txt1').value = 'DOM';
+
+        //3. JQuery
+        //- document.querySelector()
+        jQuery('#txt1').val('jQuery');
+
+        function jQuery(){
+            
+        }
+
+
+    </script>
+</body>
+</html>

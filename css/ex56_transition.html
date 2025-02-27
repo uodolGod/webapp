@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{ background-color: gold; width: 200px; height: 200px; margin: 100px;}
+
+        body{ padding: 100px; border: 1px solid black;}
+
+        body:hover #box{
+            /* width: 400px; */
+            height: 400px;
+            width: 400px;
+            font-size: 5rem; 
+
+            font-family: '궁서체';
+            opacity: .6;
+            background-color: tomato;
+            transform: rotate(360deg);
+            /* transform: scale(-1,1); */
+        }
+
+        #box{
+            /* transition-property: width,height,font-size; 
+            transition-duration: 1s ;*/
+            transition: 1s all;
+        }
+
+        /*
+            전환, Transition
+            - 객체의 속성(값) 변화를 시간순으로 보여주는 기술
+            - 수치형 속성값만
+
+        */
+
+
+    </style>
+</head>
+<body>
+    <!-- ex56_transition.html -->
+    <div id="box">상자</div>
+
+</body>
+</html>
