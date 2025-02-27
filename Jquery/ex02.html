@@ -24,6 +24,13 @@
     <script>
         /*
             jquery 함수
+            - 동적으로 태그를 생성
+
+
+            J쿼리 특징
+            1. J쿼리 검색한 모든 결과는 항상 배열 컬렉션이다
+            2. jQuery 객체에 어떤 업무를 적용하면 CSS 자동으로 루프 일괄 처리 된다.
+
         */
 
         document.getElementById('btn1').addEventListener(
@@ -89,6 +96,18 @@
                 // c.css('color','blue'); //O
                 //a.css('color','blue');  //X
 
+                //BOM(DOM) 객체 > (형변환) > jQuery 객체
+                // jQuery(b).css('color','blue');
+                // jQuery(document.body).css('background-color','gold');
+
+                // JQuery 객체 > (형변환) > DOM 객체
+                // c[0].style.color ='orange';
+
+                //document.createElement('img')
+                //jQuery('<div></div>')
+                // jQuery('<img>')[0]
+
+                
 
             });
 
